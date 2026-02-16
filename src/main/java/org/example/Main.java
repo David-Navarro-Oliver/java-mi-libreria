@@ -1,8 +1,12 @@
 package org.example;
 
-public class Main {
+class Main {
 
     static void main(String[] args) {
+
+        if (args.length > 0) {
+            System.out.println("Argumentos recibidos: " + args.length);
+        }
 
         Book book1 = new Book(
                 "Clean Code",
@@ -44,13 +48,13 @@ public class Main {
                 39.90
         );
 
-        System.out.println(book1);
-        System.out.println(book2);
-        System.out.println(book3);
-        System.out.println(book4);
-        System.out.println(book5);
+        printBook(book1);
+        printBook(book2);
+        printBook(book3);
+        printBook(book4);
+        printBook(book5);
 
-        System.out.println("---- MODIFICANDO BOOK1 ----");
+        System.out.println("---- MODIFYING BOOK1 ----");
 
         book1.setTitle("Clean Code 2");
         book1.setDescription("Second edition updated");
@@ -58,6 +62,15 @@ public class Main {
         book1.setWriter("Robert Martin Updated");
         book1.setPrice(40.00);
 
-        System.out.println(book1);
+        printBook(book1);
+    }
+
+    private static void printBook(Book book) {
+        System.out.println("Title: " + book.getTitle());
+        System.out.println("Description: " + book.getDescription());
+        System.out.println("ISBN: " + book.getIsbn());
+        System.out.println("Writer: " + book.getWriter());
+        System.out.println("Price: " + book.getPrice());
+        System.out.println("--------------------------");
     }
 }

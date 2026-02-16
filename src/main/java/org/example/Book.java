@@ -1,14 +1,12 @@
 package org.example;
 
 public class Book {
+
     private String title;
     private String description;
     private String isbn;
     private String writer;
     private double price;
-
-    public Book() {
-    }
 
     public Book(String title, String description, String isbn, String writer, double price) {
         this.title = title;
@@ -56,16 +54,5 @@ public class Book {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", writer='" + writer + '\'' +
-                ", price=" + price +
-                '}';
     }
 }
