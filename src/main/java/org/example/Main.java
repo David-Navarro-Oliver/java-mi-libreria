@@ -49,5 +49,15 @@ public class Main {
         System.out.println(book3);
         System.out.println(book4);
         System.out.println(book5);
+
+        System.out.println("---- MODIFICANDO BOOK1 ----");
+
+        book1.setTitle("Clean Code 2");
+        book1.setDescription("Second edition updated");
+        book1.setIsbn("1111111111111");
+        book1.setWriter("Robert Martin Updated");
+        book1.setPrice(40.00);
+
+        System.out.println(book1);
     }
 }
